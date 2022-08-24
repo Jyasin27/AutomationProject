@@ -6,7 +6,7 @@ import selenium.AbstractWidget;
 
 public class Tabs extends AbstractWidget {
 
-    private String tabName;
+    private String tabName;         //Books, Computers, Electronics etc
     private By tab = By.xpath(".");
 
     public Tabs(Roman roman, String tabName)

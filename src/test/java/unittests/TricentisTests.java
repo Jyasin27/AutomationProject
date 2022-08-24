@@ -3,10 +3,13 @@ package unittests;
 import Roman.RomanBase;
 import application.TricentisApplication;
 import application.models.Credentials;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.util.concurrent.TimeUnit;
+
+import static org.junit.jupiter.api.Assertions.*;
 
 public class TricentisTests extends RomanBase {
 
@@ -27,6 +30,11 @@ public class TricentisTests extends RomanBase {
         app.storePage.selectTab();
         app.storePage.selectCategoryBox();
         app.storePage.addToCart();
+        app.storePage.goToCartPage();
+
+        assertEquals();
 
     }
+
+
 }

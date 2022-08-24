@@ -10,9 +10,16 @@ public class CartPage extends AbstractPage {
         super(roman);
     }
 
+    public boolean checkItemInCart()
+    {
+        navigateTo();
+
+
+    }
+
     @Override
     protected String get_uri() {
-        return null;
+        return "https://demowebshop.tricentis.com/cart";
     }
 
     @Override

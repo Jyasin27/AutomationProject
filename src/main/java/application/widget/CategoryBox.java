@@ -19,7 +19,7 @@ public class CategoryBox extends AbstractWidget {
     {
         click(item);
     }
-    @Override //base of locator
+    @Override //base of locator to find
     protected By _Locator() {
         return By.xpath("//a[contains(text(),'"+ catName +"')]/ancestor::div[@class='item-box']");
     }

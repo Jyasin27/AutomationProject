@@ -6,7 +6,7 @@ import selenium.AbstractWidget;
 
 public class Item extends AbstractWidget {
 
-    private String itemName;
+    private String itemName;                        //Name of item in tab
     private By addToCartBtn =By.xpath(".//input");
 
     public Item(Roman roman, String itemName)
