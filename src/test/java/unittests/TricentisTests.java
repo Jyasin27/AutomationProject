@@ -21,8 +21,12 @@ public class TricentisTests extends RomanBase {
     @Test
     public void tricentisTest()
     {
-        TricentisApplication app = new TricentisApplication(roman());
-        app.homePage.navigateTo();
+        TricentisApplication app = new TricentisApplication(roman(), "Computers", "Notebooks", "14.1-inch Laptop");
+        app.homePage.goToLogin();
         app.loginPage.login(new Credentials("ttesting@gmail.com","TTestingPassword"));
+        app.storePage.selectTab();
+        app.storePage.selectCategoryBox();
+        app.storePage.addToCart();
+
     }
 }

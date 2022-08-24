@@ -7,14 +7,9 @@ import selenium.AbstractPage;
 
 public class LoginPage extends AbstractPage {
 
-    private By genderRadioBtn = By.id("gender-female"); //change to get every gender
-    private By fNameField = By.id("FirstName");
-    private By lNameField = By.id("LastName");
     private By emailField = By.id("Email");
     private By passwordField = By.id("Password");
-    private By confirmPassField = By.id("ConfirmPassword");
-    private By registerBTn = By.id("register-button");
-    private By continueBtn = By.xpath("//input[@class ='button-1 register-continue-button']");
+    private By loginBtn = By.xpath("//div[@class='buttons']//input[@class='button-1 login-button']");
 
     public LoginPage(Roman roman)
     {
@@ -24,7 +19,7 @@ public class LoginPage extends AbstractPage {
     {
         sendKeys(emailField, credentials.userEmail);
         sendKeys(passwordField, credentials.password);
-        click(registerBTn);
+        click(loginBtn);
     }
 
     @Override
