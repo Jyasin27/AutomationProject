@@ -5,7 +5,7 @@ import application.models.Credentials;
 import org.openqa.selenium.By;
 import selenium.AbstractPage;
 
-public class RegisterPage extends AbstractPage {
+public class LoginPage extends AbstractPage {
 
     private By genderRadioBtn = By.id("gender-female"); //change to get every gender
     private By fNameField = By.id("FirstName");
@@ -16,18 +16,14 @@ public class RegisterPage extends AbstractPage {
     private By registerBTn = By.id("register-button");
     private By continueBtn = By.xpath("//input[@class ='button-1 register-continue-button']");
 
-    public RegisterPage(Roman roman)
+    public LoginPage(Roman roman)
     {
         super(roman);
     }
-    public void register(Credentials credentials)
+    public void login(Credentials credentials)
     {
-        click(genderRadioBtn);
-        sendKeys(fNameField, credentials.firstName);
-        sendKeys(lNameField, credentials.lastName);
         sendKeys(emailField, credentials.userEmail);
         sendKeys(passwordField, credentials.password);
-        sendKeys(confirmPassField, credentials.confirmPassword);
         click(registerBTn);
     }
 

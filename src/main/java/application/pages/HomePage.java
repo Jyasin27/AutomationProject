@@ -6,17 +6,18 @@ import selenium.AbstractPage;
 
 public class HomePage extends AbstractPage {
 
-    private By registerBtn = By.xpath("//a[text()='Register']");
+    private By loginBtn = By.xpath("//div[@class='header-links']//li//a[text()='Log in']");
 
     public HomePage (Roman roman)
     {
         super(roman);
 
     }
-    public void navigateToRegisteration()
+    public void goToLogin()
     {
         navigateTo();
-        click
+        click(loginBtn);
+
     }
 
     @Override
