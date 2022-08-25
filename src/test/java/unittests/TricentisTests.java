@@ -3,7 +3,6 @@ package unittests;
 import Roman.RomanBase;
 import application.TricentisApplication;
 import application.models.Credentials;
-import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -24,7 +23,8 @@ public class TricentisTests extends RomanBase {
     @Test
     public void tricentisTest()
     {
-        TricentisApplication app = new TricentisApplication(roman(), "Computers", "Notebooks", "14.1-inch Laptop");
+        String itemName = "14.1-inch Laptop";
+        TricentisApplication app = new TricentisApplication(roman(), "Computers", "Notebooks", itemName);
         app.homePage.goToLogin();
         app.loginPage.login(new Credentials("ttesting@gmail.com","TTestingPassword"));
         app.storePage.selectTab();
@@ -32,7 +32,13 @@ public class TricentisTests extends RomanBase {
         app.storePage.addToCart();
         app.storePage.goToCartPage();
 
-        assertEquals();
+        assertTrue(app.cartPage.checkItemName().contains(itemName)); //check if the actual contains the name of the item
+        app.cartPage.removeCartItem();
+
+        assertTrue(app.cartPage.checkItemIsNotPresent());
+
+
+
 
     }
 

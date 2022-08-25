@@ -18,6 +18,6 @@ public class TricentisApplication {
         homePage = new HomePage(roman);
         loginPage = new LoginPage(roman);
         storePage = new StorePage(roman, tabName,catName, itemName);
-        cartPage = new CartPage(roman);
+        cartPage = new CartPage(roman, itemName);
     }
 }

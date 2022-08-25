@@ -20,6 +20,8 @@ public class Item extends AbstractWidget {
         click(addToCartBtn);
     }
 
+
+
     @Override
     protected By _Locator() {
         return By.xpath("//a[text()='"+itemName+"']/ancestor::div[@class='item-box']");

@@ -34,6 +34,7 @@ public class StorePage extends AbstractPage {
     public void addToCart()
     {
         item.clickAddToCartBtn();
+        _driver.navigate().refresh(); //refreshes page after item has been added
     }
     public void goToCartPage()
     {
