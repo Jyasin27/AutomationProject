@@ -6,9 +6,9 @@ import selenium.AbstractPage;
 
 public class HomePage extends AbstractPage {
 
-    private By loginBtn = By.xpath("//div[@class='header-links']//li//a[text()='Log in']");
+    private By loginBtn = By.xpath("//a[text()='Log in']");
 
-    public HomePage (Roman roman)
+    public HomePage (Roman roman) //Requesting roman driver
     {
         super(roman);
 
@@ -20,6 +20,7 @@ public class HomePage extends AbstractPage {
 
     }
 
+    //Required method when extending the abstract class
     @Override
     protected String get_uri() {
         return "http://demowebshop.tricentis.com/";

@@ -10,6 +10,7 @@ public class CartItem extends AbstractWidget {
     private String itemName;
     private By item = By.xpath(".");
     private By checkBox = By.xpath(".//input[@type='checkbox']");
+
     public CartItem(Roman roman, String itemName)
     {
         super(roman);
@@ -25,6 +26,7 @@ public class CartItem extends AbstractWidget {
         return getText(item);
 
     }
+
     public void selectCheckbox()
     {
         click(checkBox);
@@ -38,7 +40,7 @@ public class CartItem extends AbstractWidget {
         return By.xpath("//a[text() ='"+itemName+"']/ancestor::tr[@class='cart-item-row']");
     }
 
-
+    @Override
     public boolean waitForDisplayed() {
         return false;
     }

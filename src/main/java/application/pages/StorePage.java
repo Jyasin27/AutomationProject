@@ -18,7 +18,7 @@ public class StorePage extends AbstractPage {
     public StorePage(Roman roman, String tabName,String catName,String itemName )
     {
         super(roman);
-        this.tab = new Tabs(roman, tabName);
+        this.tab = new Tabs(roman, tabName);                //Instantiating tab as a new tabs object
         this.categoryBox = new CategoryBox(roman,catName); //view of category in the tab selected tab
         this.item = new Item(roman,itemName);
 

@@ -9,15 +9,16 @@ public class LoginPage extends AbstractPage {
 
     private By emailField = By.id("Email");
     private By passwordField = By.id("Password");
-    private By loginBtn = By.xpath("//div[@class='buttons']//input[@class='button-1 login-button']");
+    private By loginBtn = By.xpath("//input[@class='button-1 login-button']");
 
     public LoginPage(Roman roman)
     {
         super(roman);
     }
-    public void login(Credentials credentials)
+
+    public void login(Credentials credentials) //conduct the login functionality
     {
-        sendKeys(emailField, credentials.userEmail);
+        sendKeys(emailField, credentials.userEmail); //type the credentials into the email field
         sendKeys(passwordField, credentials.password);
         click(loginBtn);
     }

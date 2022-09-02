@@ -8,6 +8,7 @@ import application.pages.StorePage;
 
 public class TricentisApplication {
 
+    //public fields
     public HomePage homePage;
     public LoginPage loginPage;
     public StorePage storePage;
@@ -15,7 +16,7 @@ public class TricentisApplication {
 
     public TricentisApplication(Roman roman, String tabName, String catName, String itemName)
     {
-        homePage = new HomePage(roman);
+        homePage = new HomePage(roman); //objects
         loginPage = new LoginPage(roman);
         storePage = new StorePage(roman, tabName,catName, itemName);
         cartPage = new CartPage(roman, itemName);
