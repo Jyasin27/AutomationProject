@@ -33,12 +33,10 @@ public class TricentisTests extends RomanBase {
         app.storePage.goToCartPage();
 
         assertTrue(app.cartPage.checkItemName().contains(itemName)); //check if the actual contains the name of the item
+
         app.cartPage.removeCartItem();
 
         assertTrue(app.cartPage.checkItemIsNotPresent());
-
-
-
 
     }
 

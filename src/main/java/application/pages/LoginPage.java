@@ -21,11 +21,12 @@ public class LoginPage extends AbstractPage {
         sendKeys(emailField, credentials.userEmail); //type the credentials into the email field
         sendKeys(passwordField, credentials.password);
         click(loginBtn);
+        stepPassed("Logging in");
     }
 
     @Override
     protected String get_uri() {
-        return "https://demowebshop.tricentis.com/register";
+        return "https://demowebshop.tricentis.com/login";
     }
 
     @Override

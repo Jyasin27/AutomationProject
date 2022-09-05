@@ -2,7 +2,6 @@ package application.models;
 
 public class Credentials {
 
-
     public String userEmail;
     public String password;
 

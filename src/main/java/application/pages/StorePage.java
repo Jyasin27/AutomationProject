@@ -35,6 +35,7 @@ public class StorePage extends AbstractPage {
     {
         item.clickAddToCartBtn();
         _driver.navigate().refresh(); //refreshes page after item has been added
+        stepPassedWithScreenshot("Added item to cart");
     }
     public void goToCartPage()
     {

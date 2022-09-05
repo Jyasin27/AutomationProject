@@ -7,7 +7,6 @@ import selenium.AbstractPage;
 
 public class CartPage extends AbstractPage {
 
-    private By cartBtn = By.xpath("//div[@class='header-links']//li//a[@class='ico-cart']");
     private By emptyTextMsg = By.xpath("//div[@class='order-summary-content']");
     private By updateCartBtn = By.xpath("//input[@name='updatecart']");
     private CartItem cartItem;

@@ -33,7 +33,6 @@ public class CartItem extends AbstractWidget {
     }
 
 
-
     @Override
     protected By _Locator()
     {
