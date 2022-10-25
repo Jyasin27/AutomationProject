@@ -23,9 +23,18 @@ public class StorePage extends AbstractPage {
         this.item = new Item(roman,itemName);
 
     }
+    //Selects item that does not have a category Name
+    public StorePage(Roman roman, String tabName,String itemName )
+    {
+        super(roman);
+        this.tab = new Tabs(roman, tabName);                //Instantiating tab as a new tabs object
+        this.item = new Item(roman,itemName);
+
+    }
     public void selectTab()
     {
        tab.clickTab();
+      // stepPassed("Selected Tab");
     }
     public void selectCategoryBox()
     {
@@ -35,7 +44,7 @@ public class StorePage extends AbstractPage {
     {
         item.clickAddToCartBtn();
         _driver.navigate().refresh(); //refreshes page after item has been added
-        stepPassedWithScreenshot("Added item to cart");
+       // stepPassedWithScreenshot("Added item to cart");
     }
     public void goToCartPage()
     {

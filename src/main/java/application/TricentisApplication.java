@@ -21,4 +21,11 @@ public class TricentisApplication {
         storePage = new StorePage(roman, tabName,catName, itemName);
         cartPage = new CartPage(roman, itemName);
     }
+    public TricentisApplication(Roman roman, String tabName,String itemName)
+    {
+        homePage = new HomePage(roman); //objects
+        loginPage = new LoginPage(roman);
+        storePage = new StorePage(roman, tabName,itemName);
+        cartPage = new CartPage(roman, itemName);
+    }
 }

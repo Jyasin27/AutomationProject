@@ -16,12 +16,13 @@ public class LoginPage extends AbstractPage {
         super(roman);
     }
 
-    public void login(Credentials credentials) //conduct the login functionality
+    public void login( Credentials credentials) //conduct the login functionality
     {
         sendKeys(emailField, credentials.userEmail); //type the credentials into the email field
         sendKeys(passwordField, credentials.password);
-        click(loginBtn);
-        stepPassed("Logging in");
+        validateElement_Enabled_Displayed(loginBtn);
+       click(loginBtn);
+        //stepPassed("Logging in");
     }
 
     @Override

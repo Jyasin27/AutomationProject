@@ -1,0 +1,11 @@
+application\models\Credentials.class
+application\widget\Item.class
+application\pages\StorePage.class
+application\widget\Tabs.class
+application\TricentisApplication.class
+application\pages\HomePage.class
+application\pages\CartPage.class
+application\SQLQueries.class
+application\widget\CategoryBox.class
+application\pages\LoginPage.class
+application\widget\CartItem.class
